@@ -44,7 +44,7 @@ namespace WaktuSolatWinforms
             {
                 selectedZone = daerahComboBox.SelectedItem.ToString().Split('-')[0].Trim();
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("No daerah selected yet");
                 return;
@@ -88,7 +88,9 @@ namespace WaktuSolatWinforms
         {
             // show current time
             dateLabel.Text = DateTime.Now.ToString("D");
-            timeLabel.Text = DateTime.Now.ToString("h:mm:ss tt zz");
+            
+            var timeFormat = h12RadioButton.Checked ? "h:mm:ss tt zz" : "HH:mm:ss zz";
+            timeLabel.Text = DateTime.Now.ToString(timeFormat);
         }
 
         private void negeriComboBox_SelectedIndexChanged(object sender, EventArgs e)

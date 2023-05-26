@@ -40,8 +40,12 @@
             this.dateLabel = new System.Windows.Forms.Label();
             this.negeriComboBox = new System.Windows.Forms.ComboBox();
             this.daerahComboBox = new System.Windows.Forms.ComboBox();
+            this.h12RadioButton = new System.Windows.Forms.RadioButton();
+            this.h24RadioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.prayerGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timer1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -57,16 +61,16 @@
             // prayerGridView
             // 
             this.prayerGridView.AllowUserToDeleteRows = false;
-            this.prayerGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Right)));
+            this.prayerGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.prayerGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.prayerGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.prayerGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prayerGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.Prayer, this.Time });
-            this.prayerGridView.Location = new System.Drawing.Point(259, 12);
+            this.prayerGridView.Location = new System.Drawing.Point(229, 71);
             this.prayerGridView.Name = "prayerGridView";
-            this.prayerGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prayerGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prayerGridView.RowTemplate.Height = 35;
-            this.prayerGridView.Size = new System.Drawing.Size(346, 414);
+            this.prayerGridView.Size = new System.Drawing.Size(376, 355);
             this.prayerGridView.TabIndex = 1;
             // 
             // Prayer
@@ -107,7 +111,7 @@
             // timeLabel
             // 
             this.timeLabel.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(23, 125);
+            this.timeLabel.Location = new System.Drawing.Point(12, 116);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(163, 23);
             this.timeLabel.TabIndex = 4;
@@ -116,30 +120,62 @@
             // dateLabel
             // 
             this.dateLabel.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLabel.Location = new System.Drawing.Point(24, 36);
+            this.dateLabel.Location = new System.Drawing.Point(12, 16);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(187, 80);
+            this.dateLabel.Size = new System.Drawing.Size(199, 84);
             this.dateLabel.TabIndex = 5;
             this.dateLabel.Text = "label2";
             // 
             // negeriComboBox
             // 
             this.negeriComboBox.FormattingEnabled = true;
-            this.negeriComboBox.Location = new System.Drawing.Point(24, 172);
+            this.negeriComboBox.Location = new System.Drawing.Point(229, 16);
             this.negeriComboBox.Name = "negeriComboBox";
-            this.negeriComboBox.Size = new System.Drawing.Size(145, 24);
+            this.negeriComboBox.Size = new System.Drawing.Size(147, 24);
             this.negeriComboBox.TabIndex = 6;
             this.negeriComboBox.Text = "-- Select Negeri -";
             this.negeriComboBox.SelectedIndexChanged += new System.EventHandler(this.negeriComboBox_SelectedIndexChanged);
             // 
             // daerahComboBox
             // 
+            this.daerahComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.daerahComboBox.FormattingEnabled = true;
-            this.daerahComboBox.Location = new System.Drawing.Point(24, 202);
+            this.daerahComboBox.Location = new System.Drawing.Point(382, 16);
             this.daerahComboBox.Name = "daerahComboBox";
-            this.daerahComboBox.Size = new System.Drawing.Size(145, 24);
+            this.daerahComboBox.Size = new System.Drawing.Size(223, 24);
             this.daerahComboBox.TabIndex = 7;
             this.daerahComboBox.Text = "-- Select Daerah --";
+            // 
+            // h12RadioButton
+            // 
+            this.h12RadioButton.Checked = true;
+            this.h12RadioButton.Location = new System.Drawing.Point(13, 19);
+            this.h12RadioButton.Name = "h12RadioButton";
+            this.h12RadioButton.Size = new System.Drawing.Size(65, 24);
+            this.h12RadioButton.TabIndex = 8;
+            this.h12RadioButton.TabStop = true;
+            this.h12RadioButton.Text = "12 H";
+            this.h12RadioButton.UseVisualStyleBackColor = true;
+            // 
+            // h24RadioButton
+            // 
+            this.h24RadioButton.Location = new System.Drawing.Point(85, 19);
+            this.h24RadioButton.Name = "h24RadioButton";
+            this.h24RadioButton.Size = new System.Drawing.Size(65, 24);
+            this.h24RadioButton.TabIndex = 9;
+            this.h24RadioButton.Text = "24 H";
+            this.h24RadioButton.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.h24RadioButton);
+            this.groupBox1.Controls.Add(this.h12RadioButton);
+            this.groupBox1.Location = new System.Drawing.Point(12, 175);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(167, 60);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Time Format";
             // 
             // Form1
             // 
@@ -147,6 +183,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(616, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.daerahComboBox);
             this.Controls.Add(this.negeriComboBox);
             this.Controls.Add(this.dateLabel);
@@ -160,8 +197,14 @@
             this.Text = "Waktu Solat";
             ((System.ComponentModel.ISupportInitialize)(this.prayerGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timer1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.GroupBox groupBox1;
+
+        private System.Windows.Forms.RadioButton h12RadioButton;
+        private System.Windows.Forms.RadioButton h24RadioButton;
 
         private System.Windows.Forms.ComboBox daerahComboBox;
 
